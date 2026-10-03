@@ -1,0 +1,24 @@
+{
+  "name": "Kumiko Maker",
+  "short_name": "Kumiko",
+  "description": "Kumiko Maker: Japanese woodwork lattice with asanoha, goma and kikko patterns, assembled piece by piece in square, hexagonal or round frames. Download it as SVG or PNG.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1a212d",
+  "theme_color": "#1a212d",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

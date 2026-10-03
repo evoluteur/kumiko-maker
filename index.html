@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-063933E3C2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-063933E3C2");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kumiko Maker: Japanese Wooden Lattice Patterns</title>
+    <meta
+      name="description"
+      content="Kumiko Maker: Japanese woodwork lattice with asanoha, goma and kikko patterns, assembled piece by piece in square, hexagonal or round frames. Download it as SVG or PNG."
+    />
+    <meta
+      name="keywords"
+      content="kumiko, kumiko patterns, asanoha, goma, kikko, shoji, japanese woodwork, lattice, jigumi, tsukeko, japanese joinery, sacred geometry"
+    />
+    <meta name="author" content="Olivier Giulieri" />
+    <link rel="canonical" href="https://evoluteur.github.io/kumiko-maker/" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <meta name="theme-color" content="#1a212d" />
+    <meta property="og:site_name" content="Evoluteur" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kumiko Maker" />
+    <meta
+      property="og:description"
+      content="Japanese wooden lattice with asanoha, goma and kikko patterns, assembled piece by piece."
+    />
+    <meta property="og:url" content="https://evoluteur.github.io/kumiko-maker/" />
+    <meta
+      property="og:image"
+      content="https://evoluteur.github.io/kumiko-maker/kumiko-maker.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Overpass"
+    />
+    <link id="omg-core-css" rel="stylesheet" href="css/core.css" />
+    <script>
+      // Themes (dark, light, evol-blue) are copies of omg-themes (npm run sync:themes);
+      // set OMG_THEMES_BASE to "https://evoluteur.github.io/omg-themes/" to link the hosted ones instead.
+      window.OMG_THEMES_BASE = "";
+      window.OMG_DEFAULT_THEME = "dark";
+      (function () {
+        var t = window.OMG_DEFAULT_THEME;
+        try {
+          t = localStorage.getItem("omg-theme") || t;
+        } catch (e) {}
+        if (t !== "dark" && t !== "light" && t !== "evol-blue")
+          t = window.OMG_DEFAULT_THEME;
+        document.documentElement.setAttribute("data-theme", t);
+        // written here (not in the markup) so the saved theme loads before first paint
+        document.write(
+          '<link id="omg-theme-css" rel="stylesheet" href="' +
+            window.OMG_THEMES_BASE +
+            "css/themes/" +
+            t +
+            "/" +
+            t +
+            '.css" />',
+        );
+      })();
+    </script>
+    <link id="omg-density-css" rel="stylesheet" href="css/densities.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/kumiko.css" />
+
+    <script src="js/omg.js"></script>
+    <script src="js/kumiko.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        addEventListener("load", () =>
+          navigator.serviceWorker.register("sw.js"),
+        );
+      }
+    </script>
+  </head>
+
+  <body
+    onload="
+      setupPage('home');
+      initKumiko();
+    "
+    id="omg-body"
+  >
+    <div id="omg-header">
+      <h1>Kumiko Maker</h1>
+      <div id="omg-header-tools">
+        <div id="omg-theme-picker"></div>
+        <a
+          id="omg-github"
+          href="https://github.com/evoluteur/kumiko-maker"
+          target="_blank"
+          rel="noopener"
+          title="Kumiko Maker on GitHub"
+          aria-label="Kumiko Maker on GitHub"
+          ><svg viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            /></svg
+        ></a
+        >
+      </div>
+    </div>
+    <noscript
+      ><p class="tagline">
+        Kumiko Maker runs on JavaScript. Enable it to use the page.
+      </p></noscript
+    >
+    <h2>A lattice of wood, held together without a nail</h2>
+    <div class="content">
+      <p class="tagline">
+        Kumiko is the Japanese art of wooden lattice, seen in shoji doors,
+        transoms and lanterns since the Asuka period, 1,400 years ago. Thin
+        strips of wood are cut, notched and planed to such exact angles that
+        hundreds of them lock together by pressure alone, without a nail or a
+        drop of glue. Pick a frame and a pattern, and watch the panel being
+        assembled, piece by piece.
+      </p>
+
+      <div class="layout">
+        <div class="stage">
+          <div id="kumiko" class="canvas-box" aria-label="Kumiko panel"></div>
+          <p class="note" id="assemble-note" aria-live="polite">
+            Click a cell to change its pattern, and mix patterns in one panel.
+          </p>
+          <div class="panel under">
+            <div class="btns">
+              <button type="button" id="assemble">Assemble it</button>
+              <button type="button" id="reset" class="ghost">
+                One pattern everywhere
+              </button>
+            </div>
+            <div class="ctl" style="margin: 14px 0 0">
+              <label for="speed">Assembly pace</label
+              ><span class="val" id="speed-val"></span>
+              <input type="range" id="speed" min="1" max="10" step="1" />
+            </div>
+          </div>
+          <div class="panel under">
+            <h3>Save</h3>
+            <div class="btns">
+              <button type="button" id="export-png">Download PNG</button>
+              <button type="button" id="export-svg" class="ghost">
+                Download SVG
+              </button>
+            </div>
+            <p class="note" style="margin: 10px 0 0">
+              The address of the page keeps this panel, to share it.
+            </p>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="panel">
+            <h3>Frame and grid</h3>
+            <div
+              class="chips"
+              id="frame-chips"
+              role="group"
+              aria-label="Frame"
+            ></div>
+            <div
+              class="chips patterns"
+              id="grid-chips"
+              role="group"
+              aria-label="Grid"
+            ></div>
+            <div class="ctl">
+              <label for="n">Cells</label
+              ><span class="val" id="n-val"></span>
+              <input type="range" id="n" min="3" max="14" step="1" />
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Pattern</h3>
+            <div
+              class="chips patterns"
+              id="pattern-chips"
+              role="group"
+              aria-label="Pattern"
+            ></div>
+            <p class="note" id="pattern-about"></p>
+          </div>
+
+          <div class="panel">
+            <h3>Wood and light</h3>
+            <div
+              class="chips"
+              id="wood-chips"
+              role="group"
+              aria-label="Wood"
+            ></div>
+            <div
+              class="chips"
+              id="light-chips"
+              role="group"
+              aria-label="Light behind the panel"
+            ></div>
+            <div class="ctl">
+              <label for="width">Strip thickness</label
+              ><span class="val" id="width-val"></span>
+              <input type="range" id="width" min="2" max="10" step="0.5" />
+            </div>
+            <div class="ctl">
+              <label for="border">Frame width</label
+              ><span class="val" id="border-val"></span>
+              <input type="range" id="border" min="10" max="50" step="2" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+      <p class="note small">* Total length of strips for a panel 30 cm (12 in) across.</p>
+
+      <div class="layout info">
+        <div class="side wide">
+          <div class="panel">
+            <h3>The grid: jigumi</h3>
+            <p class="note">
+              First come the long strips of the grid, the <em>jigumi</em>.
+              Where two strips cross, each is notched halfway through so they
+              sit flush: a half-lap joint. In the triangle grid
+              (<em>mitsukude</em>) three strips cross at every joint, which
+              takes notches cut at 60 degrees, at the top, bottom and middle
+              of the strips.
+            </p>
+          </div>
+        </div>
+        <div class="side wide">
+          <div class="panel">
+            <h3>The infill: tsukeko</h3>
+            <p class="note">
+              Then each cell is filled with small pieces, the <em>tsukeko</em>,
+              planed on a jig to the exact angle and length, so they snap in
+              and hold each other tight. A good panel can have thousands of
+              them; a craftsman fits them one by one, from the middle of the
+              panel out to the frame.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          The code of this page is
+          <a href="https://github.com/evoluteur/kumiko-maker">Open source</a>
+          with MIT license.
+        </p>
+        <p>
+          Had fun browsing the app?
+          <a href="https://github.com/sponsors/evoluteur"
+            >Buy me a coffee by becoming a sponsor</a
+          >.
+        </p>
+        <p>
+          You may also like
+          <a href="https://evoluteur.github.io/sashiko-maker/">Sashiko Maker</a>,
+          <a href="https://evoluteur.github.io/islamic-patterns/">Islamic Patterns</a>,
+          <a href="https://evoluteur.github.io/rose-window-maker/">Rose Window Maker</a>,
+          and
+          <a href="https://evoluteur.github.io/mandala-maker/">Mandala Maker</a>. See them all on
+          <a href="https://evoluteur.github.io/esoterica.html">Esoterica</a>.
+        </p>
+        <p class="copyright">
+          &#169; 2026
+          <a href="https://evoluteur.github.io/">Olivier Giulieri</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+/* Kumiko Maker */
+
+.content {
+  max-width: 1120px;
+}
+.panel.under {
+  margin-top: 6px;
+}
+.chips.patterns button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.chips.patterns small {
+  font-size: 0.72em;
+  opacity: 0.75;
+}
+.jp {
+  opacity: 0.8;
+  font-weight: normal;
+}
+#pattern-about {
+  margin: 0;
+}
+.note.small {
+  margin: -8px 0 20px;
+  font-size: 0.78em;
+}
+
+/* click targets: one per cell, invisible until hovered */
+#kumiko #cells path {
+  fill: transparent;
+  stroke: none;
+  cursor: pointer;
+}
+#kumiko #cells path:hover {
+  fill: rgba(255, 170, 60, 0.22);
+}
+
+/* a piece dropping into place */
+#kumiko .drop {
+  animation: drop 0.35s ease-out both;
+}
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #kumiko .drop {
+    animation: none;
+  }
+}

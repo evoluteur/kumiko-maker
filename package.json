@@ -1,7 +1,7 @@
 {
   "name": "kumiko-maker",
   "version": "1.0.0",
-  "description": "Kumiko Maker: Japanese woodwork lattice with asanoha, goma and kikko patterns, assembled piece by piece in square, hexagonal or round frames. Download it as SVG or PNG.",
+  "description": "Japanese woodwork lattice with asanoha, goma and kikko patterns, assembled piece by piece in square, hexagonal or round frames. Download it as SVG or PNG.",
   "repository": "github:evoluteur/kumiko-maker",
   "homepage": "https://evoluteur.github.io/kumiko-maker/",
   "copyright": "(c) 2026 Olivier Giulieri",

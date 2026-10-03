@@ -19,6 +19,15 @@ Kumiko pieces are cut, notched and planed so precisely that hundreds of them loc
 - **Counts**: grid strips, half-lap joints, infill pieces, and the length of wood for a 30 cm panel.
 - **Save**: **Download PNG** (2000 pixels square) or **Download SVG**. The address of the page keeps the panel, to share it.
 
+## Patterns
+
+On the triangle grid (top) and the square grid (bottom). Click a pattern to open it in the app.
+
+<table>
+<tr><td align="center"><a href="https://evoluteur.github.io/kumiko-maker/#f=hex&g=tri&n=8&p=asanoha"><img src="img/asanoha.png" width="260" alt="Asanoha kumiko pattern"></a><br><b>Asanoha</b> 麻の葉<br>Hemp leaf</td><td align="center"><a href="https://evoluteur.github.io/kumiko-maker/#f=hex&g=tri&n=7&p=goma"><img src="img/goma.png" width="260" alt="Goma kumiko pattern"></a><br><b>Goma</b> 胡麻<br>Sesame seeds</td><td align="center"><a href="https://evoluteur.github.io/kumiko-maker/#f=hex&g=tri&n=7&p=kikko"><img src="img/kikko.png" width="260" alt="Kikkō kumiko pattern"></a><br><b>Kikkō</b> 亀甲<br>Tortoise shell</td></tr>
+<tr><td align="center"><a href="https://evoluteur.github.io/kumiko-maker/#f=square&g=sq&n=5&p=kakuasa"><img src="img/kaku-asanoha.png" width="260" alt="Kaku-asanoha kumiko pattern"></a><br><b>Kaku-asanoha</b> 角麻の葉<br>Square hemp leaf</td><td align="center"><a href="https://evoluteur.github.io/kumiko-maker/#f=round&g=sq&n=6&p=izutsu"><img src="img/izutsu-tsunagi.png" width="260" alt="Izutsu-tsunagi kumiko pattern"></a><br><b>Izutsu-tsunagi</b> 井筒つなぎ<br>Linked well frames</td><td align="center"><a href="https://evoluteur.github.io/kumiko-maker/#f=square&g=sq&n=6&p=hishi"><img src="img/hishi.png" width="260" alt="Hishi kumiko pattern"></a><br><b>Hishi</b> 菱<br>Diamonds</td></tr>
+</table>
+
 ## How it works
 
 The grid strips are long lines clipped to the frame opening (a convex polygon or a circle). Each cell then gets its pieces: three pieces from the corners to the center for asanoha, three pieces running alongside the sides for goma, three pieces from the center to the middle of the sides for kikkō, and so on. Pieces are drawn as strips of wood with a darker edge, the grid first, so its crossings look flush like real half-lap joints.

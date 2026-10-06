@@ -1,4 +1,4 @@
-const CACHE = "kumiko-maker-v1";
+const CACHE = "kumiko-maker-v2";
 const ASSETS = [
   "./",
   "css/common.css",

@@ -49,6 +49,24 @@ const PATTERNS = {
     about:
       "Three pieces from the middle of each triangle to the middle of its sides. Around every crossing of the grid they close a hexagon, like the plates of a tortoise shell: a wish for a long life.",
   },
+  tsuno: {
+    grid: "tri",
+    name: "Tsuno-asanoha",
+    jp: "つの麻の葉",
+    en: "Horned hemp leaf",
+    pieces: 6,
+    about:
+      "The hemp leaf with horns: the three pieces from the corners still meet in the middle of each triangle, and three short pieces carry on past the middle toward the sides, so every leaf grows a pair of horns.",
+  },
+  sakura: {
+    grid: "tri",
+    name: "Sakura",
+    jp: "桜",
+    en: "Cherry blossom",
+    pieces: 6,
+    about:
+      "Six pieces per triangle: three thick pieces cut off its corners, so a small hexagon rings every joint of the grid, and three thin pieces run from the middle of the triangle to them. Around each joint, five-sided petals open into a cherry blossom, the flower of spring and of life's fleeting beauty.",
+  },
   mitsukude: {
     grid: "tri",
     name: "Plain",
@@ -281,6 +299,24 @@ function fill(cell, idx) {
       for (let i = 0; i < 3; i++) segs.push([g, mid(P[i], P[(i + 1) % 3])]);
       break;
     }
+    case "tsuno": {
+      // asanoha, plus horns: each spoke carries on past the middle, 55% of the way to the far side
+      const g = centroid(P);
+      for (const v of P) segs.push([v, g]);
+      for (let i = 0; i < 3; i++) segs.push([g, lerp(g, mid(P[(i + 1) % 3], P[(i + 2) % 3]), 0.55)]);
+      break;
+    }
+    case "sakura": {
+      // a thick piece across each corner (25% up the sides), a thin piece from the middle to each
+      const g = centroid(P), f = 0.25;
+      for (let i = 0; i < 3; i++) {
+        const v = P[i], p = P[(i + 1) % 3], q = P[(i + 2) % 3];
+        const a = lerp(v, p, f), b = lerp(v, q, f);
+        segs.push([a, b]);
+        segs.push([g, mid(a, b)]);
+      }
+      break;
+    }
     case "kakuasa": {
       const [tl, tr, br, bl] = P;
       const a = cellSize();
@@ -482,7 +518,7 @@ function rebuildPieces() {
 
 // ---------------------------------------------------------------- address & storage
 
-const CODES = { asanoha: "a", goma: "g", kikko: "k", mitsukude: "m", kakuasa: "s", izutsu: "i", hishi: "h", yotsugumi: "y" };
+const CODES = { asanoha: "a", goma: "g", kikko: "k", tsuno: "t", sakura: "r", mitsukude: "m", kakuasa: "s", izutsu: "i", hishi: "h", yotsugumi: "y" };
 function writeUrl() {
   const q = new URLSearchParams();
   q.set("f", opts.frame);
